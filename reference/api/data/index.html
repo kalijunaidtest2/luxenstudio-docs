@@ -1,36 +1,25 @@
-<!doctype html>
-<html class="no-js"  lang="en" >
+<!DOCTYPE html>
 
-<head><meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-
-<meta property="og:title" content="Data" />
-  
-<meta property="og:type" content="website" />
-  
-<meta property="og:url" content="http://docs.nerf.studio/reference/api/data/index.html" />
-  
-<meta property="og:description" content="Data Parsers, Datamanagers, Datasets, Utils. Pixel Samplers: Code for sampling pixels. Scene Box: Dataset input structures." />
-  
-<meta property="og:image" content="https://assets.nerf.studio/opg.png" />
-  
-<meta property="og:image:alt" content="Data" />
-  <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Datamanagers" href="datamanagers.html" /><link rel="prev" title="Configs" href="../config.html" />
-
-    <meta name="generator" content="sphinx-5.2.1, furo 2022.09.29" />
-    <title>Data - nerfstudio</title>
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css@digest=d81277517bee4d6b0349d71bb2661d4890b5617c.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css@digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e.css" />
-    
-    
-
-
+<html class="no-js" lang="en">
+<head><meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="light dark" name="color-scheme"/><meta content="Docutils 0.19: https://docutils.sourceforge.io/" name="generator"/>
+<meta content="Data" property="og:title">
+<meta content="website" property="og:type"/>
+<meta content="http://docs.luxen.studio/reference/api/data/index.html" property="og:url"/>
+<meta content="Data Parsers, Datamanagers, Datasets, Utils. Pixel Samplers: Code for sampling pixels. Scene Box: Dataset input structures." property="og:description"/>
+<meta content="https://assets.luxen.studio/opg.png" property="og:image"/>
+<meta content="Data" property="og:image:alt"/>
+<link href="../../../genindex.html" rel="index" title="Index"/><link href="../../../search.html" rel="search" title="Search"/><link href="datamanagers.html" rel="next" title="Datamanagers"/><link href="../config.html" rel="prev" title="Configs"/>
+<meta content="sphinx-5.2.1, furo 2022.09.29" name="generator"/>
+<title>Data - luxenstudio</title>
+<link href="../../../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/styles/furo.css@digest=d81277517bee4d6b0349d71bb2661d4890b5617c.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/mystnb.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/togglebutton.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/copybutton.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/styles/furo-extensions.css@digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e.css" rel="stylesheet" type="text/css"/>
 <style>
   body {
     --color-code-background: #f8f9fb;
@@ -58,229 +47,143 @@
     }
   }
 </style><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/scripts/furo.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../_static/design-tabs.js"></script>
-    <script src="../../../_static/require.min.js"></script>
-    <script src="../../../_static/custom.js"></script>
-    </head>
-
+<script src="../../../_static/jquery.js"></script>
+<script src="../../../_static/underscore.js"></script>
+<script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../../../_static/doctools.js"></script>
+<script src="../../../_static/sphinx_highlight.js"></script>
+<script src="../../../_static/scripts/furo.js"></script>
+<script src="../../../_static/clipboard.min.js"></script>
+<script src="../../../_static/copybutton.js"></script>
+<script>let toggleHintShow = 'Click to show';</script>
+<script>let toggleHintHide = 'Click to hide';</script>
+<script>let toggleOpenOnPrint = 'true';</script>
+<script src="../../../_static/togglebutton.js"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+<script src="../../../_static/design-tabs.js"></script>
+<script src="../../../_static/require.min.js"></script>
+<script src="../../../_static/custom.js"></script>
+</meta></head>
 <body>
-    
-    <script>
+<script>
         document.body.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
-    
-
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="svg-toc" viewBox="0 0 24 24">
-    <title>Contents</title>
-    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
-      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-menu" viewBox="0 0 24 24">
-    <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-    <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </symbol>
-  <symbol id="svg-sun" viewBox="0 0 24 24">
-    <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon" viewBox="0 0 24 24">
-    <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-    </svg>
-  </symbol>
-  <symbol id="svg-sun-half" viewBox="0 0 24 24">
-    <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M13 12h5" />
-      <path d="M13 15h4" />
-      <path d="M13 18h1" />
-      <path d="M13 9h4" />
-      <path d="M13 6h1" />
-    </svg>
-  </symbol>
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<symbol id="svg-toc" viewbox="0 0 24 24">
+<title>Contents</title>
+<svg fill="currentColor" stroke="currentColor" stroke-width="0" viewbox="0 0 1024 1024">
+<path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"></path>
 </svg>
-
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+</symbol>
+<symbol id="svg-menu" viewbox="0 0 24 24">
+<title>Menu</title>
+<svg class="feather-menu" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<line x1="3" x2="21" y1="12" y2="12"></line>
+<line x1="3" x2="21" y1="6" y2="6"></line>
+<line x1="3" x2="21" y1="18" y2="18"></line>
+</svg>
+</symbol>
+<symbol id="svg-arrow-right" viewbox="0 0 24 24">
+<title>Expand</title>
+<svg class="feather-chevron-right" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<polyline points="9 18 15 12 9 6"></polyline>
+</svg>
+</symbol>
+<symbol id="svg-sun" viewbox="0 0 24 24">
+<title>Light mode</title>
+<svg class="feather-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="5"></circle>
+<line x1="12" x2="12" y1="1" y2="3"></line>
+<line x1="12" x2="12" y1="21" y2="23"></line>
+<line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+<line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+<line x1="1" x2="3" y1="12" y2="12"></line>
+<line x1="21" x2="23" y1="12" y2="12"></line>
+<line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+<line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+</svg>
+</symbol>
+<symbol id="svg-moon" viewbox="0 0 24 24">
+<title>Dark mode</title>
+<svg class="icon-tabler-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+<path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+</svg>
+</symbol>
+<symbol id="svg-sun-half" viewbox="0 0 24 24">
+<title>Auto light/dark mode</title>
+<svg class="icon-tabler-shadow" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+<circle cx="12" cy="12" r="9"></circle>
+<path d="M13 12h5"></path>
+<path d="M13 15h4"></path>
+<path d="M13 18h1"></path>
+<path d="M13 9h4"></path>
+<path d="M13 6h1"></path>
+</svg>
+</symbol>
+</svg>
+<input class="sidebar-toggle" id="__navigation" name="__navigation" type="checkbox"/>
+<input class="sidebar-toggle" id="__toc" name="__toc" type="checkbox"/>
 <label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
+<div class="visually-hidden">Hide navigation sidebar</div>
 </label>
 <label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
+<div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
-
-
-
 <div class="page">
-  <header class="mobile-header">
-    <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
-      </label>
-    </div>
-    <div class="header-center">
-      <a href="../../../index.html"><div class="brand">nerfstudio</div></a>
-    </div>
-    <div class="header-right">
-      <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-        </button>
-      </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-      </label>
-    </div>
-  </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
-      
-      <div class="sidebar-sticky"><a
-  class="sidebar-brand"
-  href="../../../index.html"
->
-  
-  <div class="sidebar-logo-container">
-    <img
-      class="sidebar-logo only-light"
-      src="../../../_static/imgs/logo.png"
-      alt="Light Logo"
-    />
-    <img
-      class="sidebar-logo only-dark"
-      src="../../../_static/imgs/logo-dark.png"
-      alt="Dark Logo"
-    />
-  </div>
+<header class="mobile-header">
+<div class="header-left">
+<label class="nav-overlay-icon" for="__navigation">
+<div class="visually-hidden">Toggle site navigation sidebar</div>
+<i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+</label>
+</div>
+<div class="header-center">
+<a href="../../../index.html"><div class="brand">luxenstudio</div></a>
+</div>
+<div class="header-right">
+<div class="theme-toggle-container theme-toggle-header">
+<button class="theme-toggle">
+<div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+<svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+<svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+<svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+</button>
+</div>
+<label class="toc-overlay-icon toc-header-icon" for="__toc">
+<div class="visually-hidden">Toggle table of contents sidebar</div>
+<i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+</label>
+</div>
+</header>
+<aside class="sidebar-drawer">
+<div class="sidebar-container">
+<div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+<div class="sidebar-logo-container">
+<img alt="Light Logo" class="sidebar-logo only-light" src="../../../_static/imgs/logo.png"/>
+<img alt="Dark Logo" class="sidebar-logo only-dark" src="../../../_static/imgs/logo-dark.png"/>
+</div>
 </a>
-
 <div style="text-align: center">
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Place this tag where you want the button to render. -->
-  <a
-    class="github-button"
-    href="https://github.com/nerfstudio-project/nerfstudio/"
-    data-color-scheme="no-preference: light; light: light; dark: light;"
-    data-size="large"
-    data-show-count="true"
-    aria-label="Download buttons/github-buttons on GitHub"
-  >
+<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+<!-- Place this tag where you want the button to render. -->
+
+<a aria-label="Download buttons/github-buttons on GitHub" class="github-button" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" href="https://github.com/luxenstudio-project/luxenstudio/">
     Github
   </a>
-  <br />
-  <a
-    href="https://colab.research.google.com/github/nerfstudio-project/nerfstudio/blob/main/colab/demo.ipynb"
-    style="
-      background-color: #ebf0f4;
-      background-image: linear-gradient(180deg, #f6f8fa, #ebf0f4 90%);
-      border-radius: 3px;
-      border: 1px solid #1b1f2426;
-      display: inline-flex;
-      cursor: pointer;
-      color: #0d0d0d;
-      font-family: Arial;
-      font-size: 12px;
-      font-weight: bold;
-      padding: 5px 41px;
-      line-height: 16px;
-      text-decoration: none;
-    "
-  >
-    <svg
-      viewBox="0 0 24 24"
-      width="16"
-      height="16"
-      class="octicon octicon-mark-github"
-    >
-      <g>
-        <path
-          d="M4.54,9.46,2.19,7.1a6.93,6.93,0,0,0,0,9.79l2.36-2.36A3.59,3.59,0,0,1,4.54,9.46Z"
-          style=""
-          fill="#E8710A"
-        ></path>
-        <path
-          d="M2.19,7.1,4.54,9.46a3.59,3.59,0,0,1,5.08,0l1.71-2.93h0l-.1-.08h0A6.93,6.93,0,0,0,2.19,7.1Z"
-          style=""
-          fill="#F9AB00"
-        ></path>
-        <path
-          d="M11.34,17.46h0L9.62,14.54a3.59,3.59,0,0,1-5.08,0L2.19,16.9a6.93,6.93,0,0,0,9,.65l.11-.09"
-          style=""
-          fill="#F9AB00"
-        ></path>
-        <path
-          d="M12,7.1a6.93,6.93,0,0,0,0,9.79l2.36-2.36a3.59,3.59,0,1,1,5.08-5.08L21.81,7.1A6.93,6.93,0,0,0,12,7.1Z"
-          style=""
-          fill="#F9AB00"
-        ></path>
-        <path
-          d="M21.81,7.1,19.46,9.46a3.59,3.59,0,0,1-5.08,5.08L12,16.9A6.93,6.93,0,0,0,21.81,7.1Z"
-          style=""
-          fill="#E8710A"
-        ></path>
-      </g>
-    </svg>
-    <span>&nbspcolab</span></a
-  >
-</div><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
+
+<br/>
+</div><form action="../../../search.html" class="sidebar-search-container" method="get" role="search">
+<input aria-label="Search" class="sidebar-search" name="q" placeholder="Search"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../quickstart/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../quickstart/first_nerf.html">Training your first model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart/first_luxen.html">Training your first model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../quickstart/existing_dataset.html">Using existing data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../quickstart/custom_dataset.html">Using custom data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../quickstart/viewer_quickstart.html">Using the viewer</a></li>
@@ -295,41 +198,41 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../extensions/unreal_engine.html">Exporting to Unreal Engine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../extensions/sdfstudio.html">SDFStudio</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">NeRFology</span></p>
+<p class="caption" role="heading"><span class="caption-text">Luxenology</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../nerfology/methods/index.html">Methods</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/instant_ngp.html">    Instant-NGP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/splat.html">    Splatfacto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/splatw.html">    Splatfacto-W</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/in2n.html">    Instruct-NeRF2NeRF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/igs2gs.html">    Instruct-GS2GS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/signerf.html">    SIGNeRF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/kplanes.html">    K-Planes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/lerf.html">    LERF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/livescene.html">    LiveScene</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/feature_splatting.html">    Feature-Splatting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/mipnerf.html">    Mip-NeRF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/nerf.html">    NeRF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/nerfacto.html">    Nerfacto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/nerfbusters.html">    Nerfbusters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/nerfplayer.html">    NeRFPlayer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/tetranerf.html">    Tetra-NeRF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/tensorf.html">    TensoRF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/generfacto.html">    Generfacto</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/pynerf.html">    PyNeRF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/seathru_nerf.html">    SeaThru-NeRF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/zipnerf.html">    Zip-NeRF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/bionerf.html">    BioNeRF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/nerf2gs2nerf.html">    NeRFtoGSandBack</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/methods/opennerf.html">    OpenNeRF</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../luxenology/methods/index.html">Methods</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/instant_ngp.html">    Instant-NGP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/splat.html">    Splatfacto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/splatw.html">    Splatfacto-W</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/in2n.html">    Instruct-Luxen2Luxen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/igs2gs.html">    Instruct-GS2GS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/sigluxen.html">    SIGLuxen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/kplanes.html">    K-Planes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/lerf.html">    LERF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/livescene.html">    LiveScene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/feature_splatting.html">    Feature-Splatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/mipluxen.html">    Mip-Luxen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/luxen.html">    Luxen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/luxenacto.html">    Luxenacto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/luxenbusters.html">    Luxenbusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/luxenplayer.html">    LuxenPlayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/tetraluxen.html">    Tetra-Luxen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/tensorf.html">    TensoRF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/geluxenacto.html">    Geluxenacto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/pyluxen.html">    PyLuxen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/seathru_luxen.html">    SeaThru-Luxen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/zipluxen.html">    Zip-Luxen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/bioluxen.html">    BioLuxen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/luxen2gs2luxen.html">    LuxentoGSandBack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/methods/openluxen.html">    OpenLuxen</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../nerfology/model_components/index.html">Model components</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/model_components/visualize_cameras.html">    Cameras models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/model_components/visualize_samples.html">    Sample representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/model_components/visualize_samplers.html">    Ray samplers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/model_components/visualize_spatial_distortions.html">    Spatial distortions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../nerfology/model_components/visualize_encoders.html">    Encoders</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../luxenology/model_components/index.html">Model components</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/model_components/visualize_cameras.html">    Cameras models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/model_components/visualize_samples.html">    Sample representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/model_components/visualize_samplers.html">    Ray samplers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/model_components/visualize_spatial_distortions.html">    Spatial distortions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../luxenology/model_components/visualize_encoders.html">    Encoders</a></li>
 </ul>
 </li>
 </ul>
@@ -413,40 +316,36 @@
 </ul>
 </li>
 </ul>
-
 </div>
 </div>
-
-      </div>
-      
-    </div>
-  </aside>
-  <div class="main">
-    <div class="content">
-      <div class="article-container">
-        <a href="index.html#" class="back-to-top muted-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
-          </svg>
-          <span>Back to top</span>
-        </a>
-        <div class="content-icon-container">
-          
+</div>
+</div>
+</aside>
+<div class="main">
+<div class="content">
+<div class="article-container">
+<a class="back-to-top muted-link" href="index.html#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+</svg>
+<span>Back to top</span>
+</a>
+<div class="content-icon-container">
 <div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-            </button>
-          </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-          </label>
-        </div>
-        <article role="main">
-          <section id="data">
+<button class="theme-toggle">
+<div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+<svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+<svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+<svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+</button>
+</div>
+<label class="toc-overlay-icon toc-content-icon" for="__toc">
+<div class="visually-hidden">Toggle table of contents sidebar</div>
+<i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+</label>
+</div>
+<article role="main">
+<section id="data">
 <span id="dataset"></span><h1>Data<a class="headerlink" href="index.html#data" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
@@ -459,10 +358,10 @@
 <section id="pixel-samplers">
 <h2>Pixel Samplers<a class="headerlink" href="index.html#pixel-samplers" title="Permalink to this heading">#</a></h2>
 <p>Code for sampling pixels.</p>
-<span class="target" id="module-nerfstudio.data.pixel_samplers"></span><dl class="py class">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PairPixelSampler">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nerfstudio.data.pixel_samplers.</span></span><span class="sig-name descname"><span class="pre">PairPixelSampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSamplerConfig" title="nerfstudio.data.pixel_samplers.PairPixelSamplerConfig"><span class="pre">PairPixelSamplerConfig</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PairPixelSampler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSampler" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler" title="nerfstudio.data.pixel_samplers.PixelSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelSampler</span></code></a></p>
+<span class="target" id="module-luxenstudio.data.pixel_samplers"></span><dl class="py class">
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PairPixelSampler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">luxenstudio.data.pixel_samplers.</span></span><span class="sig-name descname"><span class="pre">PairPixelSampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSamplerConfig" title="luxenstudio.data.pixel_samplers.PairPixelSamplerConfig"><span class="pre">PairPixelSamplerConfig</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PairPixelSampler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSampler" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler" title="luxenstudio.data.pixel_samplers.PixelSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelSampler</span></code></a></p>
 <dl class="simple">
 <dt>Samples pair of pixels from ‘image_batch’s. Samples pairs of pixels from</dt><dd><p>from the images randomly within a ‘radius’ distance apart. Useful for pair-based losses.</p>
 </dd>
@@ -473,8 +372,8 @@
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PairPixelSampler.sample_method">
-<span class="sig-name descname"><span class="pre">sample_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_images</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">device</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Int</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'batch_size</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PairPixelSampler.sample_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSampler.sample_method" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PairPixelSampler.sample_method">
+<span class="sig-name descname"><span class="pre">sample_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_images</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">device</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Int</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'batch_size</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PairPixelSampler.sample_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSampler.sample_method" title="Permalink to this definition">#</a></dt>
 <dd><p>Naive pixel sampler, uniformly samples across all possible pixels of all possible images.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -486,38 +385,32 @@
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 <dl class="py class">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PairPixelSamplerConfig">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nerfstudio.data.pixel_samplers.</span></span><span class="sig-name descname"><span class="pre">PairPixelSamplerConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_target:</span> <span class="pre">~typing.Type</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">4096</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_full_image:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_equirectangular:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_mask:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fisheye_crop_radius:</span> <span class="pre">~typing.Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rejection_sample_mask:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_iterations:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PairPixelSamplerConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSamplerConfig" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig" title="nerfstudio.data.pixel_samplers.PixelSamplerConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelSamplerConfig</span></code></a></p>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PairPixelSamplerConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">luxenstudio.data.pixel_samplers.</span></span><span class="sig-name descname"><span class="pre">PairPixelSamplerConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_target:</span> <span class="pre">~typing.Type</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">4096</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_full_image:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_equirectangular:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_mask:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fisheye_crop_radius:</span> <span class="pre">~typing.Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rejection_sample_mask:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_iterations:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PairPixelSamplerConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSamplerConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig" title="luxenstudio.data.pixel_samplers.PixelSamplerConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelSamplerConfig</span></code></a></p>
 <p>Config dataclass for PairPixelSampler.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PairPixelSamplerConfig.max_num_iterations">
-<span class="sig-name descname"><span class="pre">max_num_iterations</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSamplerConfig.max_num_iterations" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PairPixelSamplerConfig.max_num_iterations">
+<span class="sig-name descname"><span class="pre">max_num_iterations</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSamplerConfig.max_num_iterations" title="Permalink to this definition">#</a></dt>
 <dd><p>If rejection sampling masks, the maximum number of times to sample</p>
 </dd></dl>
-
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PairPixelSamplerConfig.radius">
-<span class="sig-name descname"><span class="pre">radius</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSamplerConfig.radius" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PairPixelSamplerConfig.radius">
+<span class="sig-name descname"><span class="pre">radius</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSamplerConfig.radius" title="Permalink to this definition">#</a></dt>
 <dd><p>max distance between pairs of pixels.</p>
 </dd></dl>
-
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PairPixelSamplerConfig.rejection_sample_mask">
-<span class="sig-name descname"><span class="pre">rejection_sample_mask</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSamplerConfig.rejection_sample_mask" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PairPixelSamplerConfig.rejection_sample_mask">
+<span class="sig-name descname"><span class="pre">rejection_sample_mask</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSamplerConfig.rejection_sample_mask" title="Permalink to this definition">#</a></dt>
 <dd><p>Whether or not to use rejection sampling when sampling images with masks</p>
 </dd></dl>
-
 </dd></dl>
-
 <dl class="py class">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PatchPixelSampler">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nerfstudio.data.pixel_samplers.</span></span><span class="sig-name descname"><span class="pre">PatchPixelSampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig" title="nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig"><span class="pre">PatchPixelSamplerConfig</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PatchPixelSampler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSampler" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler" title="nerfstudio.data.pixel_samplers.PixelSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelSampler</span></code></a></p>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PatchPixelSampler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">luxenstudio.data.pixel_samplers.</span></span><span class="sig-name descname"><span class="pre">PatchPixelSampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig" title="luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig"><span class="pre">PatchPixelSamplerConfig</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PatchPixelSampler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSampler" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler" title="luxenstudio.data.pixel_samplers.PixelSampler"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelSampler</span></code></a></p>
 <p>Samples ‘pixel_batch’s from ‘image_batch’s. Samples square patches
 from the images randomly. Useful for patch-based losses.</p>
 <dl class="field-list simple">
@@ -526,8 +419,8 @@ from the images randomly. Useful for patch-based losses.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PatchPixelSampler.sample_method">
-<span class="sig-name descname"><span class="pre">sample_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_images</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">device</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Int</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'batch_size</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PatchPixelSampler.sample_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSampler.sample_method" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PatchPixelSampler.sample_method">
+<span class="sig-name descname"><span class="pre">sample_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_images</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">device</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Int</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'batch_size</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PatchPixelSampler.sample_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSampler.sample_method" title="Permalink to this definition">#</a></dt>
 <dd><p>Naive pixel sampler, uniformly samples across all possible pixels of all possible images.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -539,10 +432,9 @@ from the images randomly. Useful for patch-based losses.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PatchPixelSampler.set_num_rays_per_batch">
-<span class="sig-name descname"><span class="pre">set_num_rays_per_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PatchPixelSampler.set_num_rays_per_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSampler.set_num_rays_per_batch" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PatchPixelSampler.set_num_rays_per_batch">
+<span class="sig-name descname"><span class="pre">set_num_rays_per_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PatchPixelSampler.set_num_rays_per_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSampler.set_num_rays_per_batch" title="Permalink to this definition">#</a></dt>
 <dd><p>Set the number of rays to sample per batch. Overridden to deal with patch-based sampling.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -550,38 +442,32 @@ from the images randomly. Useful for patch-based losses.</p>
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 <dl class="py class">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nerfstudio.data.pixel_samplers.</span></span><span class="sig-name descname"><span class="pre">PatchPixelSamplerConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_target:</span> <span class="pre">~typing.Type</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">4096</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_full_image:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_equirectangular:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_mask:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fisheye_crop_radius:</span> <span class="pre">~typing.Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rejection_sample_mask:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_iterations:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patch_size:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">32</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PatchPixelSamplerConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig" title="nerfstudio.data.pixel_samplers.PixelSamplerConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelSamplerConfig</span></code></a></p>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">luxenstudio.data.pixel_samplers.</span></span><span class="sig-name descname"><span class="pre">PatchPixelSamplerConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_target:</span> <span class="pre">~typing.Type</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">4096</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_full_image:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_equirectangular:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_mask:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fisheye_crop_radius:</span> <span class="pre">~typing.Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rejection_sample_mask:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_iterations:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">patch_size:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">32</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PatchPixelSamplerConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig" title="luxenstudio.data.pixel_samplers.PixelSamplerConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">PixelSamplerConfig</span></code></a></p>
 <p>Config dataclass for PatchPixelSampler.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig.max_num_iterations">
-<span class="sig-name descname"><span class="pre">max_num_iterations</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig.max_num_iterations" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig.max_num_iterations">
+<span class="sig-name descname"><span class="pre">max_num_iterations</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig.max_num_iterations" title="Permalink to this definition">#</a></dt>
 <dd><p>If rejection sampling masks, the maximum number of times to sample</p>
 </dd></dl>
-
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig.patch_size">
-<span class="sig-name descname"><span class="pre">patch_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">32</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig.patch_size" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig.patch_size">
+<span class="sig-name descname"><span class="pre">patch_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">32</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig.patch_size" title="Permalink to this definition">#</a></dt>
 <dd><p>Side length of patch. This must be consistent in the method
 config in order for samples to be reshaped into patches correctly.</p>
 </dd></dl>
-
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig.rejection_sample_mask">
-<span class="sig-name descname"><span class="pre">rejection_sample_mask</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig.rejection_sample_mask" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig.rejection_sample_mask">
+<span class="sig-name descname"><span class="pre">rejection_sample_mask</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig.rejection_sample_mask" title="Permalink to this definition">#</a></dt>
 <dd><p>Whether or not to use rejection sampling when sampling images with masks</p>
 </dd></dl>
-
 </dd></dl>
-
 <dl class="py class">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSampler">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nerfstudio.data.pixel_samplers.</span></span><span class="sig-name descname"><span class="pre">PixelSampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig" title="nerfstudio.data.pixel_samplers.PixelSamplerConfig"><span class="pre">PixelSamplerConfig</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PixelSampler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSampler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">luxenstudio.data.pixel_samplers.</span></span><span class="sig-name descname"><span class="pre">PixelSampler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig" title="luxenstudio.data.pixel_samplers.PixelSamplerConfig"><span class="pre">PixelSamplerConfig</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PixelSampler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Samples ‘pixel_batch’s from ‘image_batch’s.</p>
 <dl class="field-list simple">
@@ -590,8 +476,8 @@ config in order for samples to be reshaped into patches correctly.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSampler.collate_image_dataset_batch">
-<span class="sig-name descname"><span class="pre">collate_image_dataset_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_full_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PixelSampler.collate_image_dataset_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler.collate_image_dataset_batch" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSampler.collate_image_dataset_batch">
+<span class="sig-name descname"><span class="pre">collate_image_dataset_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_full_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PixelSampler.collate_image_dataset_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler.collate_image_dataset_batch" title="Permalink to this definition">#</a></dt>
 <dd><p>Operates on a batch of images and samples pixels to use for generating rays.
 Returns a collated batch which is input to the Graph.
 It will sample only within the valid ‘mask’ if it’s specified.</p>
@@ -605,10 +491,9 @@ It will sample only within the valid ‘mask’ if it’s specified.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSampler.collate_image_dataset_batch_list">
-<span class="sig-name descname"><span class="pre">collate_image_dataset_batch_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_full_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PixelSampler.collate_image_dataset_batch_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler.collate_image_dataset_batch_list" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSampler.collate_image_dataset_batch_list">
+<span class="sig-name descname"><span class="pre">collate_image_dataset_batch_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_full_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PixelSampler.collate_image_dataset_batch_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler.collate_image_dataset_batch_list" title="Permalink to this definition">#</a></dt>
 <dd><p>Does the same as collate_image_dataset_batch, except it will operate over a list of images / masks inside
 a list.</p>
 <p>We will use this with the intent of DEPRECIATING it as soon as we find a viable alternative.
@@ -624,10 +509,9 @@ since pytorch’s ragged tensors are still in beta (this would allow for some ve
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSampler.rejection_sample_mask">
-<span class="sig-name descname"><span class="pre">rejection_sample_mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_images</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">device</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Int</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'batch_size</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PixelSampler.rejection_sample_mask"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler.rejection_sample_mask" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSampler.rejection_sample_mask">
+<span class="sig-name descname"><span class="pre">rejection_sample_mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_images</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">device</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Int</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'batch_size</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PixelSampler.rejection_sample_mask"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler.rejection_sample_mask" title="Permalink to this definition">#</a></dt>
 <dd><p>Samples pixels within a mask using rejection sampling.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -642,10 +526,9 @@ since pytorch’s ragged tensors are still in beta (this would allow for some ve
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSampler.sample">
-<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PixelSampler.sample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler.sample" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSampler.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PixelSampler.sample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler.sample" title="Permalink to this definition">#</a></dt>
 <dd><p>Sample an image batch and return a pixel batch.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -653,10 +536,9 @@ since pytorch’s ragged tensors are still in beta (this would allow for some ve
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSampler.sample_method">
-<span class="sig-name descname"><span class="pre">sample_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_images</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">device</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Int</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'batch_size</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PixelSampler.sample_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler.sample_method" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSampler.sample_method">
+<span class="sig-name descname"><span class="pre">sample_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_images</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_width</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">device</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'cpu'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">Int</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'batch_size</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PixelSampler.sample_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler.sample_method" title="Permalink to this definition">#</a></dt>
 <dd><p>Naive pixel sampler, uniformly samples across all possible pixels of all possible images.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -668,10 +550,9 @@ since pytorch’s ragged tensors are still in beta (this would allow for some ve
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSampler.set_num_rays_per_batch">
-<span class="sig-name descname"><span class="pre">set_num_rays_per_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PixelSampler.set_num_rays_per_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler.set_num_rays_per_batch" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSampler.set_num_rays_per_batch">
+<span class="sig-name descname"><span class="pre">set_num_rays_per_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PixelSampler.set_num_rays_per_batch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler.set_num_rays_per_batch" title="Permalink to this definition">#</a></dt>
 <dd><p>Set the number of rays to sample per batch.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -679,69 +560,59 @@ since pytorch’s ragged tensors are still in beta (this would allow for some ve
 </dd>
 </dl>
 </dd></dl>
-
 </dd></dl>
-
 <dl class="py class">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSamplerConfig">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nerfstudio.data.pixel_samplers.</span></span><span class="sig-name descname"><span class="pre">PixelSamplerConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_target:</span> <span class="pre">~typing.Type</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">4096</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_full_image:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_equirectangular:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_mask:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fisheye_crop_radius:</span> <span class="pre">~typing.Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rejection_sample_mask:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_iterations:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/pixel_samplers.html#PixelSamplerConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../config.html#nerfstudio.configs.base_config.InstantiateConfig" title="nerfstudio.configs.base_config.InstantiateConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">InstantiateConfig</span></code></a></p>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSamplerConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">luxenstudio.data.pixel_samplers.</span></span><span class="sig-name descname"><span class="pre">PixelSamplerConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_target:</span> <span class="pre">~typing.Type</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_rays_per_batch:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">4096</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keep_full_image:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_equirectangular:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_mask:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fisheye_crop_radius:</span> <span class="pre">~typing.Optional[float]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rejection_sample_mask:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_iterations:</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/pixel_samplers.html#PixelSamplerConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../config.html#luxenstudio.configs.base_config.InstantiateConfig" title="luxenstudio.configs.base_config.InstantiateConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">InstantiateConfig</span></code></a></p>
 <p>Configuration for pixel sampler instantiation.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSamplerConfig.fisheye_crop_radius">
-<span class="sig-name descname"><span class="pre">fisheye_crop_radius</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.fisheye_crop_radius" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSamplerConfig.fisheye_crop_radius">
+<span class="sig-name descname"><span class="pre">fisheye_crop_radius</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.fisheye_crop_radius" title="Permalink to this definition">#</a></dt>
 <dd><p>Set to the radius (in pixels) for fisheye cameras.</p>
 </dd></dl>
-
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSamplerConfig.ignore_mask">
-<span class="sig-name descname"><span class="pre">ignore_mask</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.ignore_mask" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSamplerConfig.ignore_mask">
+<span class="sig-name descname"><span class="pre">ignore_mask</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.ignore_mask" title="Permalink to this definition">#</a></dt>
 <dd><p>Whether to ignore the masks when sampling.</p>
 </dd></dl>
-
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSamplerConfig.is_equirectangular">
-<span class="sig-name descname"><span class="pre">is_equirectangular</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.is_equirectangular" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSamplerConfig.is_equirectangular">
+<span class="sig-name descname"><span class="pre">is_equirectangular</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.is_equirectangular" title="Permalink to this definition">#</a></dt>
 <dd><p>List of whether or not camera i is equirectangular.</p>
 </dd></dl>
-
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSamplerConfig.keep_full_image">
-<span class="sig-name descname"><span class="pre">keep_full_image</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.keep_full_image" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSamplerConfig.keep_full_image">
+<span class="sig-name descname"><span class="pre">keep_full_image</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.keep_full_image" title="Permalink to this definition">#</a></dt>
 <dd><p>Whether or not to include a reference to the full image in returned batch.</p>
 </dd></dl>
-
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSamplerConfig.max_num_iterations">
-<span class="sig-name descname"><span class="pre">max_num_iterations</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.max_num_iterations" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSamplerConfig.max_num_iterations">
+<span class="sig-name descname"><span class="pre">max_num_iterations</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.max_num_iterations" title="Permalink to this definition">#</a></dt>
 <dd><p>If rejection sampling masks, the maximum number of times to sample</p>
 </dd></dl>
-
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSamplerConfig.num_rays_per_batch">
-<span class="sig-name descname"><span class="pre">num_rays_per_batch</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4096</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.num_rays_per_batch" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSamplerConfig.num_rays_per_batch">
+<span class="sig-name descname"><span class="pre">num_rays_per_batch</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4096</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.num_rays_per_batch" title="Permalink to this definition">#</a></dt>
 <dd><p>Number of rays to sample per batch.</p>
 </dd></dl>
-
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.pixel_samplers.PixelSamplerConfig.rejection_sample_mask">
-<span class="sig-name descname"><span class="pre">rejection_sample_mask</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.rejection_sample_mask" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.pixel_samplers.PixelSamplerConfig.rejection_sample_mask">
+<span class="sig-name descname"><span class="pre">rejection_sample_mask</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.rejection_sample_mask" title="Permalink to this definition">#</a></dt>
 <dd><p>Whether or not to use rejection sampling when sampling images with masks</p>
 </dd></dl>
-
 </dd></dl>
-
 </section>
 <section id="scene-box">
 <h2>Scene Box<a class="headerlink" href="index.html#scene-box" title="Permalink to this heading">#</a></h2>
 <p>Dataset input structures.</p>
-<span class="target" id="module-nerfstudio.data.scene_box"></span><dl class="py class">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.OrientedBox">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nerfstudio.data.scene_box.</span></span><span class="sig-name descname"><span class="pre">OrientedBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">jaxtyping.Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'3</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">jaxtyping.Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'3'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">jaxtyping.Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'3'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/scene_box.html#OrientedBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.scene_box.OrientedBox" title="Permalink to this definition">#</a></dt>
+<span class="target" id="module-luxenstudio.data.scene_box"></span><dl class="py class">
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.OrientedBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">luxenstudio.data.scene_box.</span></span><span class="sig-name descname"><span class="pre">OrientedBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">jaxtyping.Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'3</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">jaxtyping.Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'3'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">jaxtyping.Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'3'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/scene_box.html#OrientedBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.scene_box.OrientedBox" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.OrientedBox.R">
-<span class="sig-name descname"><span class="pre">R</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'3</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="index.html#nerfstudio.data.scene_box.OrientedBox.R" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.OrientedBox.R">
+<span class="sig-name descname"><span class="pre">R</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'3</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="index.html#luxenstudio.data.scene_box.OrientedBox.R" title="Permalink to this definition">#</a></dt>
 <dd><p>rotation matrix.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -749,10 +620,9 @@ since pytorch’s ragged tensors are still in beta (this would allow for some ve
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.OrientedBox.S">
-<span class="sig-name descname"><span class="pre">S</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'3'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="index.html#nerfstudio.data.scene_box.OrientedBox.S" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.OrientedBox.S">
+<span class="sig-name descname"><span class="pre">S</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'3'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="index.html#luxenstudio.data.scene_box.OrientedBox.S" title="Permalink to this definition">#</a></dt>
 <dd><p>scale vector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -760,10 +630,9 @@ since pytorch’s ragged tensors are still in beta (this would allow for some ve
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.OrientedBox.T">
-<span class="sig-name descname"><span class="pre">T</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'3'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="index.html#nerfstudio.data.scene_box.OrientedBox.T" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.OrientedBox.T">
+<span class="sig-name descname"><span class="pre">T</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'3'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="index.html#luxenstudio.data.scene_box.OrientedBox.T" title="Permalink to this definition">#</a></dt>
 <dd><p>translation vector.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -771,29 +640,25 @@ since pytorch’s ragged tensors are still in beta (this would allow for some ve
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.OrientedBox.from_params">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/scene_box.html#OrientedBox.from_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.scene_box.OrientedBox.from_params" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.OrientedBox.from_params">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/scene_box.html#OrientedBox.from_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.scene_box.OrientedBox.from_params" title="Permalink to this definition">#</a></dt>
 <dd><p>Construct a box from position, rotation, and scale parameters.</p>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.OrientedBox.within">
-<span class="sig-name descname"><span class="pre">within</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/scene_box.html#OrientedBox.within"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.scene_box.OrientedBox.within" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.OrientedBox.within">
+<span class="sig-name descname"><span class="pre">within</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/scene_box.html#OrientedBox.within"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.scene_box.OrientedBox.within" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns a boolean mask indicating whether each point is within the box.</p>
 </dd></dl>
-
 </dd></dl>
-
 <dl class="py class">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.SceneBox">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nerfstudio.data.scene_box.</span></span><span class="sig-name descname"><span class="pre">SceneBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aabb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'2</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/scene_box.html#SceneBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.scene_box.SceneBox" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.SceneBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">luxenstudio.data.scene_box.</span></span><span class="sig-name descname"><span class="pre">SceneBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aabb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'2</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/scene_box.html#SceneBox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.scene_box.SceneBox" title="Permalink to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Data to represent the scene box.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.SceneBox.aabb">
-<span class="sig-name descname"><span class="pre">aabb</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'2</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="index.html#nerfstudio.data.scene_box.SceneBox.aabb" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.SceneBox.aabb">
+<span class="sig-name descname"><span class="pre">aabb</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'2</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="index.html#luxenstudio.data.scene_box.SceneBox.aabb" title="Permalink to this definition">#</a></dt>
 <dd><p>axis-aligned bounding box.
 aabb[0] is the minimum (x,y,z) point.
 aabb[1] is the maximum (x,y,z) point.</p>
@@ -803,10 +668,9 @@ aabb[1] is the maximum (x,y,z) point.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.SceneBox.from_camera_poses">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_camera_poses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">poses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'*batch</span> <span class="pre">3</span> <span class="pre">4'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="index.html#nerfstudio.data.scene_box.SceneBox" title="nerfstudio.data.scene_box.SceneBox"><span class="pre">SceneBox</span></a></span></span><a class="reference internal" href="../../../_modules/nerfstudio/data/scene_box.html#SceneBox.from_camera_poses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.scene_box.SceneBox.from_camera_poses" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.SceneBox.from_camera_poses">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_camera_poses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">poses</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'*batch</span> <span class="pre">3</span> <span class="pre">4'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale_factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="index.html#luxenstudio.data.scene_box.SceneBox" title="luxenstudio.data.scene_box.SceneBox"><span class="pre">SceneBox</span></a></span></span><a class="reference internal" href="../../../_modules/luxenstudio/data/scene_box.html#SceneBox.from_camera_poses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.scene_box.SceneBox.from_camera_poses" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the instance of SceneBox that fully envelopes a set of poses</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -817,16 +681,14 @@ aabb[1] is the maximum (x,y,z) point.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.SceneBox.get_center">
-<span class="sig-name descname"><span class="pre">get_center</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/scene_box.html#SceneBox.get_center"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.scene_box.SceneBox.get_center" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.SceneBox.get_center">
+<span class="sig-name descname"><span class="pre">get_center</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/scene_box.html#SceneBox.get_center"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.scene_box.SceneBox.get_center" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the center of the box.</p>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.SceneBox.get_centered_and_scaled_scene_box">
-<span class="sig-name descname"><span class="pre">get_centered_and_scaled_scene_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scale_factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/scene_box.html#SceneBox.get_centered_and_scaled_scene_box"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.scene_box.SceneBox.get_centered_and_scaled_scene_box" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.SceneBox.get_centered_and_scaled_scene_box">
+<span class="sig-name descname"><span class="pre">get_centered_and_scaled_scene_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scale_factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tensor</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/scene_box.html#SceneBox.get_centered_and_scaled_scene_box"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.scene_box.SceneBox.get_centered_and_scaled_scene_box" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns a new box that has been shifted and rescaled to be centered
 about the origin.</p>
 <dl class="field-list simple">
@@ -835,16 +697,14 @@ about the origin.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.SceneBox.get_diagonal_length">
-<span class="sig-name descname"><span class="pre">get_diagonal_length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/scene_box.html#SceneBox.get_diagonal_length"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.scene_box.SceneBox.get_diagonal_length" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.SceneBox.get_diagonal_length">
+<span class="sig-name descname"><span class="pre">get_diagonal_length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/scene_box.html#SceneBox.get_diagonal_length"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.scene_box.SceneBox.get_diagonal_length" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the longest diagonal length.</p>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.SceneBox.get_normalized_positions">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_normalized_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">positions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'*batch</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aabb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'2</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/scene_box.html#SceneBox.get_normalized_positions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.scene_box.SceneBox.get_normalized_positions" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.SceneBox.get_normalized_positions">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_normalized_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">positions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'*batch</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aabb</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'2</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/scene_box.html#SceneBox.get_normalized_positions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.scene_box.SceneBox.get_normalized_positions" title="Permalink to this definition">#</a></dt>
 <dd><p>Return normalized positions in range [0, 1] based on the aabb axis-aligned bounding box.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -855,151 +715,135 @@ about the origin.</p>
 </dd>
 </dl>
 </dd></dl>
-
 <dl class="py method">
-<dt class="sig sig-object py" id="nerfstudio.data.scene_box.SceneBox.within">
-<span class="sig-name descname"><span class="pre">within</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/nerfstudio/data/scene_box.html#SceneBox.within"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#nerfstudio.data.scene_box.SceneBox.within" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="luxenstudio.data.scene_box.SceneBox.within">
+<span class="sig-name descname"><span class="pre">within</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Float</span><span class="p"><span class="pre">[</span></span><span class="pre">Tensor</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">'n</span> <span class="pre">3'</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/luxenstudio/data/scene_box.html#SceneBox.within"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="index.html#luxenstudio.data.scene_box.SceneBox.within" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns a boolean mask indicating whether each point is within the box.</p>
 </dd></dl>
-
 </dd></dl>
-
 </section>
 </section>
-
-        </article>
-      </div>
-      <footer>
-        
-        <div class="related-pages">
-          <a class="next-page" href="datamanagers.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Datamanagers</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="../config.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Configs</div>
-                
-              </div>
-            </a>
-        </div>
-        <div class="bottom-of-page">
-          <div class="left-details">
-            <div class="copyright">
-                Copyright &#169; 2022, nerfstudio Team
+</article>
+</div>
+<footer>
+<div class="related-pages">
+<a class="next-page" href="datamanagers.html">
+<div class="page-info">
+<div class="context">
+<span>Next</span>
+</div>
+<div class="title">Datamanagers</div>
+</div>
+<svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+</a>
+<a class="prev-page" href="../config.html">
+<svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+<div class="page-info">
+<div class="context">
+<span>Previous</span>
+</div>
+<div class="title">Configs</div>
+</div>
+</a>
+</div>
+<div class="bottom-of-page">
+<div class="left-details">
+<div class="copyright">
+                Copyright © 2022, luxenstudio Team
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
             <a href="https://github.com/pradyunsg/furo">Furo</a>
-            
-          </div>
-          <div class="right-details">
-            <div class="icons">
-              
-            </div>
-          </div>
-        </div>
-        
-      </footer>
-    </div>
-    <aside class="toc-drawer">
-      
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
+</div>
+<div class="right-details">
+<div class="icons">
+</div>
+</div>
+</div>
+</footer>
+</div>
+<aside class="toc-drawer">
+<div class="toc-sticky toc-scroll">
+<div class="toc-title-container">
+<span class="toc-title">
             On this page
           </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
+</div>
+<div class="toc-tree-container">
+<div class="toc-tree">
+<ul>
 <li><a class="reference internal" href="index.html#">Data</a><ul>
 <li><a class="reference internal" href="index.html#pixel-samplers">Pixel Samplers</a><ul>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSampler"><code class="docutils literal notranslate"><span class="pre">PairPixelSampler</span></code></a><ul>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSampler.sample_method"><code class="docutils literal notranslate"><span class="pre">PairPixelSampler.sample_method()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSampler"><code class="docutils literal notranslate"><span class="pre">PairPixelSampler</span></code></a><ul>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSampler.sample_method"><code class="docutils literal notranslate"><span class="pre">PairPixelSampler.sample_method()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSamplerConfig"><code class="docutils literal notranslate"><span class="pre">PairPixelSamplerConfig</span></code></a><ul>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSamplerConfig.max_num_iterations"><code class="docutils literal notranslate"><span class="pre">PairPixelSamplerConfig.max_num_iterations</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSamplerConfig.radius"><code class="docutils literal notranslate"><span class="pre">PairPixelSamplerConfig.radius</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PairPixelSamplerConfig.rejection_sample_mask"><code class="docutils literal notranslate"><span class="pre">PairPixelSamplerConfig.rejection_sample_mask</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSamplerConfig"><code class="docutils literal notranslate"><span class="pre">PairPixelSamplerConfig</span></code></a><ul>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSamplerConfig.max_num_iterations"><code class="docutils literal notranslate"><span class="pre">PairPixelSamplerConfig.max_num_iterations</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSamplerConfig.radius"><code class="docutils literal notranslate"><span class="pre">PairPixelSamplerConfig.radius</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PairPixelSamplerConfig.rejection_sample_mask"><code class="docutils literal notranslate"><span class="pre">PairPixelSamplerConfig.rejection_sample_mask</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSampler"><code class="docutils literal notranslate"><span class="pre">PatchPixelSampler</span></code></a><ul>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSampler.sample_method"><code class="docutils literal notranslate"><span class="pre">PatchPixelSampler.sample_method()</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSampler.set_num_rays_per_batch"><code class="docutils literal notranslate"><span class="pre">PatchPixelSampler.set_num_rays_per_batch()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSampler"><code class="docutils literal notranslate"><span class="pre">PatchPixelSampler</span></code></a><ul>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSampler.sample_method"><code class="docutils literal notranslate"><span class="pre">PatchPixelSampler.sample_method()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSampler.set_num_rays_per_batch"><code class="docutils literal notranslate"><span class="pre">PatchPixelSampler.set_num_rays_per_batch()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig"><code class="docutils literal notranslate"><span class="pre">PatchPixelSamplerConfig</span></code></a><ul>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig.max_num_iterations"><code class="docutils literal notranslate"><span class="pre">PatchPixelSamplerConfig.max_num_iterations</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig.patch_size"><code class="docutils literal notranslate"><span class="pre">PatchPixelSamplerConfig.patch_size</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PatchPixelSamplerConfig.rejection_sample_mask"><code class="docutils literal notranslate"><span class="pre">PatchPixelSamplerConfig.rejection_sample_mask</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig"><code class="docutils literal notranslate"><span class="pre">PatchPixelSamplerConfig</span></code></a><ul>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig.max_num_iterations"><code class="docutils literal notranslate"><span class="pre">PatchPixelSamplerConfig.max_num_iterations</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig.patch_size"><code class="docutils literal notranslate"><span class="pre">PatchPixelSamplerConfig.patch_size</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PatchPixelSamplerConfig.rejection_sample_mask"><code class="docutils literal notranslate"><span class="pre">PatchPixelSamplerConfig.rejection_sample_mask</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler"><code class="docutils literal notranslate"><span class="pre">PixelSampler</span></code></a><ul>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler.collate_image_dataset_batch"><code class="docutils literal notranslate"><span class="pre">PixelSampler.collate_image_dataset_batch()</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler.collate_image_dataset_batch_list"><code class="docutils literal notranslate"><span class="pre">PixelSampler.collate_image_dataset_batch_list()</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler.rejection_sample_mask"><code class="docutils literal notranslate"><span class="pre">PixelSampler.rejection_sample_mask()</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler.sample"><code class="docutils literal notranslate"><span class="pre">PixelSampler.sample()</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler.sample_method"><code class="docutils literal notranslate"><span class="pre">PixelSampler.sample_method()</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSampler.set_num_rays_per_batch"><code class="docutils literal notranslate"><span class="pre">PixelSampler.set_num_rays_per_batch()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler"><code class="docutils literal notranslate"><span class="pre">PixelSampler</span></code></a><ul>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler.collate_image_dataset_batch"><code class="docutils literal notranslate"><span class="pre">PixelSampler.collate_image_dataset_batch()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler.collate_image_dataset_batch_list"><code class="docutils literal notranslate"><span class="pre">PixelSampler.collate_image_dataset_batch_list()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler.rejection_sample_mask"><code class="docutils literal notranslate"><span class="pre">PixelSampler.rejection_sample_mask()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler.sample"><code class="docutils literal notranslate"><span class="pre">PixelSampler.sample()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler.sample_method"><code class="docutils literal notranslate"><span class="pre">PixelSampler.sample_method()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSampler.set_num_rays_per_batch"><code class="docutils literal notranslate"><span class="pre">PixelSampler.set_num_rays_per_batch()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig</span></code></a><ul>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.fisheye_crop_radius"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.fisheye_crop_radius</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.ignore_mask"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.ignore_mask</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.is_equirectangular"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.is_equirectangular</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.keep_full_image"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.keep_full_image</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.max_num_iterations"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.max_num_iterations</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.num_rays_per_batch"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.num_rays_per_batch</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.pixel_samplers.PixelSamplerConfig.rejection_sample_mask"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.rejection_sample_mask</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig</span></code></a><ul>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.fisheye_crop_radius"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.fisheye_crop_radius</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.ignore_mask"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.ignore_mask</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.is_equirectangular"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.is_equirectangular</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.keep_full_image"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.keep_full_image</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.max_num_iterations"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.max_num_iterations</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.num_rays_per_batch"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.num_rays_per_batch</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.pixel_samplers.PixelSamplerConfig.rejection_sample_mask"><code class="docutils literal notranslate"><span class="pre">PixelSamplerConfig.rejection_sample_mask</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a class="reference internal" href="index.html#scene-box">Scene Box</a><ul>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.OrientedBox"><code class="docutils literal notranslate"><span class="pre">OrientedBox</span></code></a><ul>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.OrientedBox.R"><code class="docutils literal notranslate"><span class="pre">OrientedBox.R</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.OrientedBox.S"><code class="docutils literal notranslate"><span class="pre">OrientedBox.S</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.OrientedBox.T"><code class="docutils literal notranslate"><span class="pre">OrientedBox.T</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.OrientedBox.from_params"><code class="docutils literal notranslate"><span class="pre">OrientedBox.from_params()</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.OrientedBox.within"><code class="docutils literal notranslate"><span class="pre">OrientedBox.within()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.OrientedBox"><code class="docutils literal notranslate"><span class="pre">OrientedBox</span></code></a><ul>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.OrientedBox.R"><code class="docutils literal notranslate"><span class="pre">OrientedBox.R</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.OrientedBox.S"><code class="docutils literal notranslate"><span class="pre">OrientedBox.S</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.OrientedBox.T"><code class="docutils literal notranslate"><span class="pre">OrientedBox.T</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.OrientedBox.from_params"><code class="docutils literal notranslate"><span class="pre">OrientedBox.from_params()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.OrientedBox.within"><code class="docutils literal notranslate"><span class="pre">OrientedBox.within()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.SceneBox"><code class="docutils literal notranslate"><span class="pre">SceneBox</span></code></a><ul>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.SceneBox.aabb"><code class="docutils literal notranslate"><span class="pre">SceneBox.aabb</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.SceneBox.from_camera_poses"><code class="docutils literal notranslate"><span class="pre">SceneBox.from_camera_poses()</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.SceneBox.get_center"><code class="docutils literal notranslate"><span class="pre">SceneBox.get_center()</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.SceneBox.get_centered_and_scaled_scene_box"><code class="docutils literal notranslate"><span class="pre">SceneBox.get_centered_and_scaled_scene_box()</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.SceneBox.get_diagonal_length"><code class="docutils literal notranslate"><span class="pre">SceneBox.get_diagonal_length()</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.SceneBox.get_normalized_positions"><code class="docutils literal notranslate"><span class="pre">SceneBox.get_normalized_positions()</span></code></a></li>
-<li><a class="reference internal" href="index.html#nerfstudio.data.scene_box.SceneBox.within"><code class="docutils literal notranslate"><span class="pre">SceneBox.within()</span></code></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.SceneBox"><code class="docutils literal notranslate"><span class="pre">SceneBox</span></code></a><ul>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.SceneBox.aabb"><code class="docutils literal notranslate"><span class="pre">SceneBox.aabb</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.SceneBox.from_camera_poses"><code class="docutils literal notranslate"><span class="pre">SceneBox.from_camera_poses()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.SceneBox.get_center"><code class="docutils literal notranslate"><span class="pre">SceneBox.get_center()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.SceneBox.get_centered_and_scaled_scene_box"><code class="docutils literal notranslate"><span class="pre">SceneBox.get_centered_and_scaled_scene_box()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.SceneBox.get_diagonal_length"><code class="docutils literal notranslate"><span class="pre">SceneBox.get_diagonal_length()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.SceneBox.get_normalized_positions"><code class="docutils literal notranslate"><span class="pre">SceneBox.get_normalized_positions()</span></code></a></li>
+<li><a class="reference internal" href="index.html#luxenstudio.data.scene_box.SceneBox.within"><code class="docutils literal notranslate"><span class="pre">SceneBox.within()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-
-          </div>
-        </div>
-      </div>
-      
-      
-    </aside>
-  </div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</aside>
+</div>
 </div></body>
-
 </html>
